@@ -1,1 +1,22 @@
-<p>homepage works!</p>
+<br> <div style="text-align: center;"><h2> Expense List</h2></div>
+<div class="container">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Expense Id</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let exp of expenses" >
+           <td>{{exp.id}}</td> <!--Interfolation-->
+           <td>{{exp.description}}</td>
+           <td>{{exp.amount}}</td>
+           <td>{{exp.expense_date}}</td>
+           
+        </tr>
+    </tbody>
+</table>
+</div>
