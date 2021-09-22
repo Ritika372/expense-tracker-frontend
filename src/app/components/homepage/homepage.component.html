@@ -1,22 +1,46 @@
-<br> <div style="text-align: center;"><h2> Expense List</h2></div>
+<br />
+<div style="text-align: center"><h2>Expense List</h2></div>
 <div class="container">
-<table class="table table-striped">
+  <table class="table table-striped">
     <thead>
-        <tr>
-            <th>Expense Id</th>
-            <th>Description</th>
-            <th>Amount</th>
-            <th>Date</th>
-        </tr>
+      <tr>
+        <th>Expense Id</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
     </thead>
     <tbody>
-        <tr *ngFor ="let exp of expenses" >
-           <td>{{exp.id}}</td> <!--Interfolation-->
-           <td>{{exp.description}}</td>
-           <td>{{exp.amount}}</td>
-           <td>{{exp.expense_date}}</td>
-           
-        </tr>
+      <tr *ngFor="let exp of expenses">
+        <td>{{ exp.id }}</td>
+        <!--Interpolation-->
+        <td>{{ exp.description }}</td>
+        <td>{{ exp.amount }}</td>
+        <td>{{ exp.expense_date }}</td>
+      </tr>
     </tbody>
-</table>
+  </table>
+</div>
+<br /><br />
+<div style="text-align: center"><h2>Income List</h2></div>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Income Id</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let inc of income">
+        <td>{{ inc.id }}</td>
+        <!--Interpolation-->
+        <td>{{ inc.description }}</td>
+        <td>{{ inc.amount }}</td>
+        <td>{{ inc.created_on }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
