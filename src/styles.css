@@ -2,3 +2,6 @@
 body {
   background-color: #e4e4e4;
 }
+.modal-backdrop {
+  z-index: -1;
+}

@@ -1,18 +1,9 @@
-<button
-  type="button"
-  class="btn btn-primary"
-  data-bs-toggle="modal"
-  data-bs-target="#staticBackdrop"
->
-  Add Income
-</button>
 
 <div
   class="modal fade"
   id="staticBackdrop"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
-  tabindex="-1"
   aria-labelledby="staticBackdropLabel"
   aria-hidden="true"
 >
@@ -30,81 +21,42 @@
       <div class="modal-body">
         <form class="row g-3">
           <div class="col-md-6">
+            <label class="form-label">Category</label>
+            <input type="text" class="form-control" placeholder="Category" />
+          </div>
+          <div class="col-md-6">
             <label class="form-label">Amount</label>
-            <input type="number" class="form-control" placeholder="" />
+            <div class="input-group mb-3">
+              <span class="input-group-text">&#8377;</span>
+              <input
+                type="number"
+                class="form-control"
+                id="inputamount"
+                placeholder="Amount"
+              />
+            </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-12">
             <label class="form-label">Description</label>
-            <input type="text" class="form-control" placeholder="" />
-          </div>
-
-          <div class="col-12">
-            <label for="inputAddress" class="form-label">Address</label>
-            <input
-              type="text"
-              class="form-control"
-              id="inputAddress"
-              placeholder="1234 Main St"
-            />
-          </div>
-          <div class="col-12">
-            <label for="inputAddress2" class="form-label">Address 2</label>
-            <input
-              type="text"
-              class="form-control"
-              id="inputAddress2"
-              placeholder="Apartment, studio, or floor"
-            />
+            <input type="text" class="form-control" placeholder="Description" />
           </div>
           <div class="col-md-6">
-            <label for="inputCity" class="form-label">City</label>
-            <input type="text" class="form-control" id="inputCity" />
+            <label class="form-label">Date</label>
+            <input type="date" class="form-control" placeholder="" />
           </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label">State</label>
-            <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-2">
-            <label for="inputZip" class="form-label">Zip</label>
-            <input type="text" class="form-control" id="inputZip" />
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck" />
+          <div class="form-group col-md-6">
+            <div class="form-check" style="margin-top: 5%">
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="form-check-input" type="checkbox" />
               <label class="form-check-label" for="gridCheck">
-                Check me out
+                Recurring
               </label>
             </div>
           </div>
           <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
-        </form>
-        <form>
-
-
-
-          <div class="mb-3">
-            <label class="form-label">Category</label>
-            <input type="text" class="form-control" placeholder="" />
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Date</label>
-            <input type="date" class="form-control" placeholder="" />
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" value="oneTime" />
-            <label class="form-check-label">One-Time</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" value="Recurring" />
-            <label class="form-check-label">Recurring</label>
-          </div>
-          <br /><br />
-          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>

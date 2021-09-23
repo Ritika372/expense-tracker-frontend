@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-add-income',
@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-income.component.css']
 })
 export class AddIncomeComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
