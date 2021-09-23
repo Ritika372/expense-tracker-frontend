@@ -20,15 +20,18 @@ export class HomepageComponent implements OnInit {
   income: Income[];
   cashInflow: Number = 0;
   cashOutflow: Number = 0;
+  balance: Number = 0;
 
   ngOnInit(): void {
     this.getExpenses();
     this.getIncome();
   }
+
   getExpenses() {
     this.expenseService.getExpenseList().subscribe((data) => {
       this.expenses = data;
       this.calculateOutflow();
+      this.balance = +this.cashInflow - +this.cashOutflow;
     });
   }
 
@@ -37,8 +40,8 @@ export class HomepageComponent implements OnInit {
       this.income = data;
       console.log(this.income);
       this.calculateInflow();
+      this.balance = +this.cashInflow - +this.cashOutflow;
     });
-
   }
 
   calculateInflow() {

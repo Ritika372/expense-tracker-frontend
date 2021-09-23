@@ -9,8 +9,14 @@ import { Observable } from 'rxjs';
 export class IncomeService {
   private baseurl =
     'http://localhost:8080/v1/users/614763699e85b82ee95e6d69/income';
+
   constructor(private httpClient: HttpClient) {}
+
   getIncomeList(): Observable<Income[]> {
     return this.httpClient.get<Income[]>(this.baseurl);
+  }
+
+  addIncome(income: Income): Observable<Object> {
+    return this.httpClient.post(this.baseurl, income);
   }
 }
