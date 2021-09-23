@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddIncomeComponent } from './components/add-income/add-income.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomepageComponent, AddIncomeComponent],
+  declarations: [AppComponent, NavbarComponent, HomepageComponent, AddIncomeComponent,ExpenseModalComponent ],
   imports: [HttpClientModule, BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
