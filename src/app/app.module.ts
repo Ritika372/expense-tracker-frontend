@@ -7,9 +7,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ExpenseModalComponent } from './components/expense-modal/expense-modal.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomepageComponent],
+  declarations: [AppComponent, NavbarComponent, HomepageComponent, ExpenseModalComponent],
   imports: [HttpClientModule, BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

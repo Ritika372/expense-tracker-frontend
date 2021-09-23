@@ -1,0 +1,89 @@
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#expense_modal">
+    Launch demo modal
+  </button>
+<div class="modal fade" id="expense_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Add Expense</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputcat">Category</label>
+                    <input type="text" class="form-control" id="inputcat" placeholder="Category">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputamount">Amout</label>
+                    <div class="input-group mb-3">
+                   
+
+                        <span class="input-group-text">&#8377;</span>
+                        <input type="number" class="form-control" id="inputamount" placeholder="Amount">
+                     
+
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputdesc">Desciption</label>
+                  <input type="text" class="form-control" id="inputdesc" placeholder="Where.. Why..">
+                </div>
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputdate">Date</label>
+                  <input type="date" class="form-control" id="inputdate" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-group col-md-6">
+                   
+                    <div class="form-check" style="margin-top: 5%;">
+                        <br> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                        Recurring
+                      </label>
+                    </div>
+                  </div>
+            </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Check me out
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
