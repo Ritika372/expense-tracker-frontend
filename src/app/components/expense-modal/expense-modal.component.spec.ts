@@ -22,4 +22,5 @@ describe('ExpenseModalComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });
