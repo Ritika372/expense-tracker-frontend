@@ -18,6 +18,9 @@ export class HomepageComponent implements OnInit {
   ) {}
   expenses: Expense[];
   income: Income[];
+  cashInflow: Number = 0;
+  cashOutflow: Number = 0;
+
   ngOnInit(): void {
     this.getExpenses();
     this.getIncome();
@@ -25,13 +28,43 @@ export class HomepageComponent implements OnInit {
   getExpenses() {
     this.expenseService.getExpenseList().subscribe((data) => {
       this.expenses = data;
-      console.log(this.expenses);
+      this.calculateOutflow();
     });
   }
 
   getIncome() {
-    this.incomeService
-      .getIncomeList()
-      .subscribe((data) => (this.income = data));
+    this.incomeService.getIncomeList().subscribe((data) => {
+      this.income = data;
+      console.log(this.income);
+      this.calculateInflow();
+    });
+
+  }
+
+  calculateInflow() {
+    var date = new Date();
+    var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+    var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+    var filteredIncome = this.income.filter((inc) => {
+      var date = new Date(inc.created_on);
+      return date >= firstDay && date <= lastDay;
+    });
+    filteredIncome.forEach((inc) => {
+      this.cashInflow = +this.cashInflow + +inc.amount;
+    });
+  }
+
+  calculateOutflow() {
+    var date = new Date();
+    var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+    var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+    var filteredExpense = this.expenses.filter((exp) => {
+      var date = new Date(exp.expense_date);
+      return date >= firstDay && date <= lastDay;
+    });
+
+    filteredExpense.forEach((exp) => {
+      this.cashOutflow = +this.cashOutflow + +exp.amount;
+    });
   }
 }
