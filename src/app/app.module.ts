@@ -8,6 +8,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AddIncomeComponent } from './components/add-income/add-income.component';
+import { ExpenseModalComponent } from './components/expense-modal/expense-modal.component';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, HomepageComponent, AddIncomeComponent,ExpenseModalComponent ],
