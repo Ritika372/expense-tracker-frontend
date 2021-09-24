@@ -11,9 +11,10 @@ import { AddIncomeComponent } from './components/add-income/add-income.component
 import { ExpenseModalComponent } from './components/expense-modal/expense-modal.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomepageComponent, AddIncomeComponent,ExpenseModalComponent, LoginComponent ],
+  declarations: [AppComponent, NavbarComponent, HomepageComponent, AddIncomeComponent,ExpenseModalComponent, LoginComponent, RegisterComponent ],
   imports: [HttpClientModule, BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
