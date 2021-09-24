@@ -1,7 +1,1 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-  background-color: #e4e4e4;
-}
-.modal-backdrop {
-  z-index: -1;
-}
+@import url('assets/fonts/material-icon/css/material-design-iconic-font.min.css');
